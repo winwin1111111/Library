@@ -1,0 +1,283 @@
+@import "modern-normalize";
+
+:root {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+
+ol[role="list"], ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --box-shadow:0px 0px 8px rgba(0, 0, 0, 0.2);
+    --border:2px solid black;
+    --background-color-card:linear-gradient(135deg, #a8c0ff, #3f2b96);
+    --padding-h1:50px 100px;
+}
+
+html,
+body{
+    height:100%;
+    margin:0;
+}
+.container{
+    height:100%;
+    display:grid;
+    grid-template-rows:1fr 5fr;
+
+}
+.header{
+    box-shadow: var(--box-shadow);
+    padding:var(--padding-h1);
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    
+}
+.header .libraryInfo{
+    justify-self: end;
+}
+.libraryInfo{
+    border:var(--border);
+    padding:50px 100px;
+}
+.header h1{
+    font-size: 150px;
+}
+.libraryInfo h2{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.libraryInfo h3{
+    font-size:25px;
+    position: relative;
+}
+.totalBook{
+    position:absolute;
+    left:100%;
+}
+.completed{
+    position:absolute;
+    left:100%;
+}
+.progress{
+    position:absolute;
+    left:100%;
+}
+.main{
+    display:grid;
+    grid-template-rows: 1fr 4fr;
+
+}
+.addBook-container{
+    padding:50px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+
+}
+.addingbtn{
+    border-radius: 100px;
+    font-size: 70px;
+    color:black;
+    background-color: white;
+    border:0px;
+    height:150px;
+    width:600px;
+    align-items: center;
+    justify-content: center;
+    gap:40px;
+    display: flex;
+    transition:background-color 2s, color 1.5s, transform 1s, box-shadow 0.5s;
+}
+.addingbtn:hover{
+    background-image: linear-gradient(135deg, #a8c0ff, #3f2b96); 
+    color:white;
+    transform:translateY(-10px);
+    box-shadow: 5px 5px 10px grey;
+}
+.addingbtn:hover .plus{
+    transform:rotate(90deg);
+}
+.plus{
+    font-size: 150px;
+    transition:transform 0.5s;
+}
+.addingbtn svg{
+    width:100px;
+    height:100px;
+}
+.cards-container{
+    padding:0px 50px;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(600px, 1fr)); 
+    gap:70px;
+}
+.cards{
+    height:600px;
+    width:600px;
+    background-image: linear-gradient(-135deg, #a8c0ff, #3f2b96);
+    border-radius: 50px;
+    position: relative;
+    padding:50px;
+    color:white;
+
+}
+.xicon{
+    position:absolute;
+    bottom:88%;
+    left:89%;
+    transition:transform 1s;
+}
+.xicon:hover{
+    transform:rotate(90deg);
+}
+.white-stroke:hover path{
+    stroke-width: 7px;
+}
+.white-stroke path{
+    transition:stroke-width 1s;
+}
+.cards h2{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.cards h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.lock{
+    position: absolute;
+    top:85%;
+    left:85%;
+}
+.lock svg{
+    width:50px;
+    height:50px;
+
+}
+
+svg{
+    width:30px;
+    height:30px;
+
+}
+*{
+    font-family:'Times New Roman', Times, serif;
+}
+#title{
+    width:100%;
+    height:80px;
+    font-size: 60px;
+    border: 0px;
+    background-color:inherit;
+    color:white;
+    border-bottom: 3px solid white;
+    transition: all 0.2s;
+}
+.title-container{
+    position: relative;
+}
+#title:focus,
+#author:focus,
+#pages:focus,
+#read:focus{
+    outline:none;
+    border-bottom: 7px solid white;
+}
+#titleLabel{
+    position: absolute;
+    bottom:0%;
+    left:12px;
+    font-size: 60px;
+    color:white;
+    transition: transform 0.5s, font-size 0.5s;
+}
+#title:focus + #titleLabel,
+#title:valid + #titleLabel{
+    transform: translateY(-150%);
+    font-size: 30px;
+    
+}
+#form{
+    box-shadow:10px 10px 20px grey;
+    background-image: linear-gradient(-135deg, #000, #FFF);
+    
+}
+.author-container,
+.pages-container,
+.read-container{
+    position: relative;
+}
+
+#authorLabel, 
+#pagesLabel,
+#readLabel{
+    font-size:30px;
+    position: absolute;
+    left:12px;
+    top:20px;
+}
+#author,
+#pages,
+#read{
+    width:78%;
+    height:50px;
+    font-size: 30px;
+    border: 0px;
+    background-color:inherit;
+    color:white;
+    border-bottom: 3px solid white;
+    transition: all 0.2s;
+    margin-top: 20px;
+    margin-left:110px;
+}
+
+#pages,
+#read{
+    margin-left:160px;
+    width:68%;
+    margin-top: 10px;
+
+}
+#pagesLabel,
+#readLabel{
+    top:10px;
+}
+.createButton{
+    padding:20px 50px;
+    font-size: 40px;
+    border-radius: 20px;
+    border:5px solid white;
+    background-color: inherit;
+    font-weight:bold;
+    margin-top:70px;
+    margin-left: 140px;
+    color: white;
+    transition:all 0.5s;
+}
+.createButton:hover{
+    box-shadow: 5px 5px white;
+    transform: translateY(-5px);
+    transform: translateX(-5px);
+}
